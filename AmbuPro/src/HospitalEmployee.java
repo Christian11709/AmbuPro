@@ -1,12 +1,16 @@
+import java.util.ArrayList;
+
 public class HospitalEmployee {
     protected String name;
     protected int number;
     protected String assignment;
+    protected static ArrayList<HospitalEmployee> employees = new ArrayList<>();
 
     public HospitalEmployee(String empName, int empNumber)
    {
       name = empName;
       number = empNumber;
+      employees.add(this);
    }
 
    public void setAssignment(String empAssignment)
@@ -28,7 +32,7 @@ public class HospitalEmployee {
    {
      return assignment;
    }
-   
+
    public String getName()
    {
       return name;
@@ -48,4 +52,10 @@ public class HospitalEmployee {
    {
       System.out.println(name + " works for the hospital.");
    }
+
+   public static void listStatus() {
+      for (HospitalEmployee employee : employees) {
+          System.out.println("Name: " + employee.name + "\tNumber: " + employee.number + "\tAssignment: " + employee.assignment);
+      }
+  }
 }
