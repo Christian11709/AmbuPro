@@ -4,17 +4,17 @@ public class main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		HospitalEmployee vito = new HospitalEmployee("Vito", 123);
-		Ambulance amOne = new Ambulance("Available", 1);
-
-		System.out.println(vito);
-		System.out.println(amOne);
+		Ambulance amOne = new Ambulance(true, 1);
+		Ambulance amTwo = new Ambulance(true, 2);
+		Ambulance amThree = new Ambulance(true, 3);
 
 		vito.work();
 		amOne.status();
+		amTwo.status();
+		amThree.status();
 
 		vito.setAssignment("Ambulance #1");
-		vito.getNumber();
-		System.out.println("Vito is assigned to: " + vito.getAssignment(0));
+		System.out.println("Vito is assigned to " + vito.getAssignment(0));
 	}
 
 }

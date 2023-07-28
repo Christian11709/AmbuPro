@@ -1,14 +1,14 @@
 public class Ambulance {
-    protected String status;
+    protected boolean status;
     protected int number;
 
-    public Ambulance(String empStatus, int empNumber)
+    public Ambulance(boolean empStatus, int empNumber)
    {
       status = empStatus;
       number = empNumber;
    }
 
-   public void setStatus(String empStatus)
+   public void setStatus(boolean empStatus)
    {
       status = empStatus;
    }
@@ -18,7 +18,7 @@ public class Ambulance {
       number = empNumber;
    }
 
-   public String getStatus()
+   public boolean getStatus()
    {
       return status;
    }
@@ -35,7 +35,8 @@ public class Ambulance {
 
    public void status()
    {
-      System.out.println("Ambulance #" + number + ": " + status);
+      String statusString = status ? "Available" : "Not Available";
+      System.out.println("Ambulance #" + number + ": " + statusString);
    }
 }
 
