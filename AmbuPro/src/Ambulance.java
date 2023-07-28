@@ -1,11 +1,15 @@
+import java.util.ArrayList;
+
 public class Ambulance {
     protected boolean status;
     protected int number;
+    protected static ArrayList<Ambulance> ambulances = new ArrayList<>();
 
     public Ambulance(boolean empStatus, int empNumber)
    {
       status = empStatus;
       number = empNumber;
+      ambulances.add(this);
    }
 
    public void setStatus(boolean empStatus)
@@ -38,5 +42,10 @@ public class Ambulance {
       String statusString = status ? "Available" : "Not Available";
       System.out.println("Ambulance #" + number + ": " + statusString);
    }
-}
 
+   public static void listStatus() {
+    for (Ambulance ambulance : ambulances) {
+        System.out.println("Ambulance #" + ambulance.number + ": " + (ambulance.status ? "Available" : "Not Available"));
+    }
+   }
+}
