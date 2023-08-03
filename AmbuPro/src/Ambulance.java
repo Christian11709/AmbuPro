@@ -81,6 +81,7 @@ public class Ambulance {
         System.out.println("Ambulance #" + ambulance.number + ": " + (ambulance.status ? "Available" : "Not Available"));
         System.out.println("  Assigned Staff: " + ambulance.doctor + " , " + ambulance.employee);
         System.out.println("  Assigned Attendee: " + ambulance.assignment);
+        System.out.println("");
     } 
    }
 }

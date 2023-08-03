@@ -16,7 +16,8 @@ public class main {
 		Ambulance amOne = new Ambulance(false, 1);
 		Ambulance amTwo = new Ambulance(false, 2);
 		Ambulance amThree = new Ambulance(false, 3);
-		HospitalAttendee attOne = new HospitalAttendee("Teddy Roosevelt", 1, "Bearattack", "WhiteHouse");
+		HospitalAttendee attOne = new HospitalAttendee("Teddy Roosevelt", 1, "Bear Attack", "The White House");
+		HospitalAttendee attTwo = new HospitalAttendee("Benny", 1, "Allergic Reaction", "337 Road Street");
 
 		System.out.println("Initial status lists after adding Employees, Doctors, Ambulances, Attendees");
 		System.out.println("-----------------------------------------------------------------");
