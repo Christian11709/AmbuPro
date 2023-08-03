@@ -5,6 +5,7 @@ public class Ambulance {
     protected int number;
     protected String doctor;
     protected String employee;
+    protected String assignment;
     protected static ArrayList<Ambulance> ambulances = new ArrayList<>();
 
     public Ambulance(boolean amStatus, int amNumber)
@@ -17,6 +18,10 @@ public class Ambulance {
    public void setStatus(boolean amStatus)
    {
       status = amStatus;
+   }
+
+   public void setAttendee(String amAttendee) {
+      assignment = amAttendee;
    }
 
    public void setNumber(int amNumber)
@@ -50,6 +55,10 @@ public class Ambulance {
       return employee;
    }
 
+   public String getAttendee() {
+      return assignment;
+   }
+
    public String toString()
    {
       return status + "\t" + number;
@@ -71,6 +80,7 @@ public class Ambulance {
     for (Ambulance ambulance : ambulances) {
         System.out.println("Ambulance #" + ambulance.number + ": " + (ambulance.status ? "Available" : "Not Available"));
         System.out.println("  Assigned Staff: " + ambulance.doctor + " , " + ambulance.employee);
+        System.out.println("  Assigned Attendee: " + ambulance.assignment);
     } 
    }
 }

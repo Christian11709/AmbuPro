@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.management.AttributeNotFoundException;
+
 public class main {
 
 	public static void main(String[] args) {
@@ -14,6 +16,7 @@ public class main {
 		Ambulance amOne = new Ambulance(false, 1);
 		Ambulance amTwo = new Ambulance(false, 2);
 		Ambulance amThree = new Ambulance(false, 3);
+		HospitalAttendee attOne = new HospitalAttendee("Teddy Roosevelt", 1, "Bearattack", "WhiteHouse");
 
 		//list of every employee + info
 		HospitalEmployee.listStatus();
@@ -21,6 +24,8 @@ public class main {
 		HospitalDoctor.listStatus();
 		//list of every ambulance + info
 		Ambulance.listStatus();
+		//list of attendees
+		HospitalAttendee.listStatus();
 
 		//set an employee assignment
 		vito.setAssignment("Ambulance #2");
@@ -42,6 +47,15 @@ public class main {
 		HospitalEmployee.listStatus();
 		HospitalDoctor.listStatus();
 		Ambulance.listDetailedStatus();
+
+		//assign patient to staffed/available ambulance
+		attOne.setAssignment("Ambulance #2");
+		amTwo.setAttendee("Teddy Roosevelt");
+		//set amTwo to not available since it has an assignment now
+		amTwo.setStatus(false);
+		
+		Ambulance.listDetailedStatus();
+		HospitalAttendee.listStatus();
 
 
 	}
