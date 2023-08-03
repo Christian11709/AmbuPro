@@ -8,10 +8,10 @@ public class main {
 	public static void main(String[] args) {
 		//create employees and ambulances
 		HospitalEmployee vito = new HospitalEmployee("Vito", 1231);
-		HospitalEmployee mario = new HospitalEmployee("Mario", 1232);
+		HospitalEmployee drybones = new HospitalEmployee("Dry Bones", 1232);
 		HospitalEmployee luigi = new HospitalEmployee("Luigi", 1233);
 		HospitalDoctor bowser = new HospitalDoctor("Bowser", 2231);
-		HospitalDoctor drybones = new HospitalDoctor("DryBones", 2232);
+		HospitalDoctor mario = new HospitalDoctor("Mario", 2232);
 		HospitalDoctor pepper = new HospitalDoctor("Pepper", 2233);
 		Ambulance amOne = new Ambulance(false, 1);
 		Ambulance amTwo = new Ambulance(false, 2);
