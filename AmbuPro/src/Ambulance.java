@@ -3,23 +3,33 @@ import java.util.ArrayList;
 public class Ambulance {
     protected boolean status;
     protected int number;
+    protected String doctor;
+    protected String employee;
     protected static ArrayList<Ambulance> ambulances = new ArrayList<>();
 
-    public Ambulance(boolean empStatus, int empNumber)
+    public Ambulance(boolean amStatus, int amNumber)
    {
-      status = empStatus;
-      number = empNumber;
+      status = amStatus;
+      number = amNumber;
       ambulances.add(this);
    }
 
-   public void setStatus(boolean empStatus)
+   public void setStatus(boolean amStatus)
    {
-      status = empStatus;
+      status = amStatus;
    }
 
-   public void setNumber(int empNumber)
+   public void setNumber(int amNumber)
    {
-      number = empNumber;
+      number = amNumber;
+   }
+
+   public void setDoctor(String amDoctor) {
+      doctor = amDoctor;
+   }
+
+   public void setEmployee(String amEmployee) {
+      employee = amEmployee;
    }
 
    public boolean getStatus()
@@ -30,6 +40,14 @@ public class Ambulance {
    public int getNumber()
    {
       return number;
+   }
+
+   public String getDoctor() {
+      return doctor;
+   }
+
+   public String getEmployee() {
+      return employee;
    }
 
    public String toString()
@@ -47,5 +65,12 @@ public class Ambulance {
     for (Ambulance ambulance : ambulances) {
         System.out.println("Ambulance #" + ambulance.number + ": " + (ambulance.status ? "Available" : "Not Available"));
     }
+   }
+
+   public static void listDetailedStatus() {
+    for (Ambulance ambulance : ambulances) {
+        System.out.println("Ambulance #" + ambulance.number + ": " + (ambulance.status ? "Available" : "Not Available"));
+        System.out.println("  Assigned Staff: " + ambulance.doctor + " , " + ambulance.employee);
+    } 
    }
 }

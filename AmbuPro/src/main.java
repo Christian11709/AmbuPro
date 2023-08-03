@@ -24,19 +24,24 @@ public class main {
 
 		//set an employee assignment
 		vito.setAssignment("Ambulance #2");
+		amTwo.setEmployee("Vito");
 		System.out.println("Vito is assigned to " + vito.getAssignment(0));
 		
 		//set a doctor assignment
 		pepper.setAssignment("Ambulance #2");
+		amTwo.setDoctor("Dr. Pepper");
+		System.out.println("Dr. Pepper is assigned to " + vito.getAssignment(0));
 
 		//Ambulance #2 is now staffed. set availability to true
-		amOne.setStatus(true);
-		System.out.println("Ambulance #1 set to available");
+		amTwo.setStatus(true);
+		System.out.println("Ambulance #2 set to available");
+
+	
 
 		//confirm changes
 		HospitalEmployee.listStatus();
 		HospitalDoctor.listStatus();
-		Ambulance.listStatus();
+		Ambulance.listDetailedStatus();
 
 
 	}

@@ -16,6 +16,7 @@ public class HospitalDoctor {
    public void setAssignment(String docAssignment)
    {
       assignment = docAssignment;
+      
    }
 
    public void setName(String docName)
