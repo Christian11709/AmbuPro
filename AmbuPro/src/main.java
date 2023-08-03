@@ -18,6 +18,8 @@ public class main {
 		Ambulance amThree = new Ambulance(false, 3);
 		HospitalAttendee attOne = new HospitalAttendee("Teddy Roosevelt", 1, "Bearattack", "WhiteHouse");
 
+		System.out.println("Initial status lists after adding Employees, Doctors, Ambulances, Attendees");
+		System.out.println("-----------------------------------------------------------------");
 		//list of every employee + info
 		HospitalEmployee.listStatus();
 		//list of every doctor + info
@@ -27,6 +29,7 @@ public class main {
 		//list of attendees
 		HospitalAttendee.listStatus();
 
+		System.out.println("-----------------------------------------------------------------");
 		//set an employee assignment
 		vito.setAssignment("Ambulance #2");
 		amTwo.setEmployee("Vito");
@@ -42,18 +45,20 @@ public class main {
 		System.out.println("Ambulance #2 set to available");
 
 	
-
+		System.out.println("-----------------------------------------------------------------");
 		//confirm changes
-		HospitalEmployee.listStatus();
-		HospitalDoctor.listStatus();
 		Ambulance.listDetailedStatus();
 
+		System.out.println("-----------------------------------------------------------------");
 		//assign patient to staffed/available ambulance
 		attOne.setAssignment("Ambulance #2");
 		amTwo.setAttendee("Teddy Roosevelt");
+		System.out.println("Patient assigned to Ambulance #2");
 		//set amTwo to not available since it has an assignment now
 		amTwo.setStatus(false);
-		
+		System.out.println("Ambulance #2 set to unavailable");
+
+		System.out.println("-----------------------------------------------------------------");
 		Ambulance.listDetailedStatus();
 		HospitalAttendee.listStatus();
 
